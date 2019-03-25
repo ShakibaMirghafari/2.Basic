@@ -23,7 +23,7 @@
 
 			//for (int index = 1; index <=Count; index++)
 			//{
-			//	string message = $"[{index}] : Helho World! ";
+			//	string message = $"[{index}] : Hello World! ";
 			//	System.Console.WriteLine(message);
 			//}
 			//System.Console.ReadLine();
@@ -51,19 +51,47 @@
 			//System.Console.ReadLine();
 
 			//----------------;کد زیر اعداد بین 1 تا 20 را نمایش میدهد.
-			int x = 1;
+			//	int x = 1;
 
-			loop1:
+			//	loop1:
 
-			if (x<20)
+			//	if (x<20)
+			//	{
+			//		System.Console.WriteLine(x);
+
+			//		x++;
+
+			//		goto loop1;
+			//	}
+			//	System.Console.WriteLine("Done");
+			//	System.Console.ReadLine();
+
+			//------------از کاربر میپرسیم چندتا عدد دارد بعد ار ینکه اعلام کرد اعداد ر از او میپرسیم و در آرایه ذخیره یکنیم
+
+			System.Console.Write("How Many Number Do You Have Number? ");
+
+			string numberstring = System.Console.ReadLine();
+			int numberint = System.Convert.ToInt32(numberstring);
+
+			int[] numbers = new int [numberint];
+
+			for (int index = 0; index <= numberint-1; index++)
 			{
-				System.Console.WriteLine(x);
+				string message = $"[{index +1}]: ";
+				System.Console.Write(message);
 
-				x++;
+				string numstr = System.Console.ReadLine();
+				int numint = System.Convert.ToInt32(numstr);
 
-				goto loop1;
+				numbers[index] = numint;
 			}
-			System.Console.WriteLine("Done");
+
+			for (int index = 0; index <= numberint-1; index++)
+			{
+				string message = $"[{index + 1}] = {numbers[index]}";
+				System.Console.WriteLine(message);
+			}
+
 			System.Console.ReadLine();
 		}
 	}
